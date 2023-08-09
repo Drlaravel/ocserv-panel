@@ -34,10 +34,6 @@ sudo bash ocserv-install.sh
 - Authorized User IDs (for controlling access)
 - OpenConnect Server (`ocserv`) installed on your system
 
-## Setup
-pip3 install -r requirements.txt
-
-
 ## Notes
 Ensure that your bot is running and accessible before using it.
 Use this bot responsibly and securely. Make sure to follow best practices for securing your bot and the systems it interacts with.
@@ -59,16 +55,5 @@ For making connection to your server, you can use `AnyConnect`, `OpenConnect` or
 - OpenConnect: [OpenConnect client for Linux](https://computingforgeeks.com/how-to-connect-to-vpn-server-with-openconnect-ssl-vpn-client-on-linux/).
 
 And one more thing, contributions are welcome.
-
-## How to customize the configuration?
-In docker way, at the beginning you have to clone the repo:
-```sh
-git clone https://github.com/Drlaravel/ocserv-panel.git
-```
-
-cd to the directory
-```sh
-cd ./ocserv-panel
-```
 
 
