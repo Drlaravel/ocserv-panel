@@ -133,9 +133,27 @@ getidsbot(){
        echo -e "\033[1;32mㅤOpenConnect User Manager Telegram BOT Starting \033[0m\n"
 }
 
+install_dependencies() {
+    echo "Installing Python dependencies..."
+    pip3 install -r requirements.txt
+    echo "Python dependencies installed."
+}
+if [ -e "requirements.txt" ]; then
+    install_dependencies
+else
+    echo "requirements.txt file not found."
+    sleep 2
+    echo "Downloading bot.py from GitHub..."
+    curl -O "https://raw.githubusercontent.com/Drlaravel/ocserv-panel/main/requirements.txt"
+
+fi
+
 
 telegram-bot(){
   clear
+
+ install_dependencies
+
 echo -e "\E[44;1;37mㅤOpenConnect User Manager Telegram BOT Activationㅤ\E[0m\n"
     echo -e "                 \033[1;33m[\033[1;31m!\033[1;33m] \033[1;31mATTENTION! \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
     echo -e "\n\033[1;32m1° \033[1;37m- \033[1;33mTHROUGH YOUR TELEGRAM ACCOUNT, ACCESS THE FOLLOWING BOT\033[1;37m:\033[0m"
