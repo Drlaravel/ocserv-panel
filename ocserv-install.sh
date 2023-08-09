@@ -120,10 +120,17 @@ getidsbot(){
         echo -ne "\033[1;32m◇ INFORM YOUR TELEGRAM ID:\033[1;37m "
         read iduser
         clear
-        echo -e "\033[1;32mㅤOpenConnect User Manager Telegram BOT Starting \033[0m\n"
+        
         export BOT_TOKEN="$tokenbot"
         export ADMIN_USER_ID="$iduser"
-        python3 ./openconnect/bot.py
+        # Check if bot.py exists
+        if [ ! -f "bot.py" ]; then
+          echo "Downloading bot.py from GitHub..."
+          curl -O "https://raw.githubusercontent.com/Drlaravel/ocserv-panel/main/bot.py"
+        fi
+       screen -dmS bot_session bash -c "python3 ./bot.py" 
+       sleep 2
+       echo -e "\033[1;32mㅤOpenConnect User Manager Telegram BOT Starting \033[0m\n"
 }
 
 

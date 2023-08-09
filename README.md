@@ -6,8 +6,12 @@ This source is designed to manage ocserv (OpenConnect Server) through user-frien
 Tested on ubuntu 18.04 and 16.04.
 
 Download and saving script on your server:
-```bash
-curl -O https://raw.githubusercontent.com/iw4p/OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv/master/ocserv-install.sh
+```sh
+git clone https://github.com/Drlaravel/ocserv-panel.git
+```
+cd to the directory
+```sh
+cd ./ocserv-panel
 ```
 
 Making script executable
@@ -38,8 +42,6 @@ pip3 install -r requirements.txt
 Ensure that your bot is running and accessible before using it.
 Use this bot responsibly and securely. Make sure to follow best practices for securing your bot and the systems it interacts with.
 
-
-
 ## Features 
 - Easy install
 - Easy uninstall
@@ -61,35 +63,12 @@ And one more thing, contributions are welcome.
 ## How to customize the configuration?
 In docker way, at the beginning you have to clone the repo:
 ```sh
-git clone https://github.com/iw4p/OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv.git
+git clone https://github.com/Drlaravel/ocserv-panel.git
 ```
 
 cd to the directory
 ```sh
-cd ./OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv
-```
-You can change port, disable UDP, add custom-header and so on.
-Modify and customize ocserv.conf file and then build your image with modified ocserv.conf:
-```sh
-docker build . -t ocserv
+cd ./ocserv-panel
 ```
 
-Create new container from ocserv image
-```sh
-docker run --name ocserv --privileged -p 443:443 -p 443:443/udp -d ocserv
-```
 
-Next steps like add or remove users are same as Docker Installation part.
-
-
-## Issues
-Feel free to submit issues and enhancement requests or contact me via [vida.page/nima](https://vida.page/nima).
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=iw4p/OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv&type=Date)](https://star-history.com/#iw4p/OpenConnect-Cisco-AnyConnect-VPN-Server-OneKey-ocserv&Date)
-
-
-## More
-The script is based on [here](https://ocserv.gitlab.io/www/recipes-ocserv-configuration-basic.html)
-# ocserv-panel
